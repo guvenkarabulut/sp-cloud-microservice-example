@@ -1,6 +1,5 @@
 server:
   port: 8080
-
 spring:
   application:
     name: customer
@@ -19,7 +18,19 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+  sleuth:
+    enabled: true
+    log:
+      slf4j:
+        enabled: true
+  zipkin:
+    base-url: http://localhost:9411/
+  profiles:
+    active: default
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: true

@@ -12,5 +12,8 @@
         <module name="customer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zipkin-server" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>
